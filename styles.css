@@ -1,0 +1,134 @@
+/* Remove default margin and padding */
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Hamburger Menu styles */
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.hamburger-icon:before,
+.hamburger-icon:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+}
+
+.menu-items {
+    display: none;
+}
+
+.menu-items.show {
+    display: block;
+}
+
+/* Section styles */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    /* Default background color for sections */
+}
+
+/* Section styles */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-1 {
+    background-color: #f8f9fa;
+    /* Light gray */
+}
+
+#section-2 {
+    background-color: #dee2e6;
+    /* Lighter gray */
+}
+
+#section-3 {
+    background-color: #ced4da;
+    /* Light grayish blue */
+}
+
+#section-4 {
+    background-color: #adb5bd;
+    /* Light grayish blue */
+}
+
+.section h2 {
+    color: #000;
+    text-decoration: none;
+    /* Remove underlined text */
+    list-style-type: none;
+    /* Remove bullet points */
+}
+
+.section p {
+    color: #000;
+}
+
+
+/* Bold Intro Image Section styles */
+.bold-intro-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./images/MoMA_KI.webp') no-repeat center center fixed;
+    background-size: cover;
+    height: 50vh;
+    /* Set initial height to 50% of viewport height */
+}
+
+.bold-intro-image img {
+    width: 85%;
+    /* Resize image to 90% of its original size */
+    height: auto;
+    transform: scaleX(0);
+    /* Reset initial state of the image */
+    transform-origin: center center;
+    transition: transform 1s ease-in-out;
+}
+
+/* Make image visible after delay */
+.bold-intro-image img.unfold {
+    transform: scaleX(1);
+}
+
+/* Media query for phone view */
+@media (max-width: 768px) {
+    .bold-intro-image {
+        height: 70vh;
+        /* Adjust height for phone view */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    .bold-intro-image {
+        height: 100vh;
+        /* Adjust height for larger screens */
+    }
+
+}
