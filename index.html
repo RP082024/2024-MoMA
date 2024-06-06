@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pfosser MoMA</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,10 +15,10 @@
     <div class="hamburger-menu">
         <div class="hamburger-icon"></div>
         <ul class="menu-items">
-            <li><a href="#section-1" style="text-decoration: none; color:gray">Background</a></li>
-            <li><a href="#section-2">Section 2</a></li>
-            <li><a href="#section-3">Section 3</a></li>
-            <li><a href="#section-4">Section 4</a></li>
+            <li><a href="#section-1" style="text-decoration: none; color:darkgrey">Background</a></li>
+            <li><a href="#section-2" style="text-decoration: none; color:darkgrey">Results</a></li>
+            <li><a href="#section-3" style="text-decoration: none; color:darkgrey">Methodology</a></li>
+            <li><a href="#section-4" style="text-decoration: none; color:darkgrey">Reflection</a></li>
         </ul>
     </div>
     <!-- Bold Intro Image Section -->
@@ -28,16 +29,55 @@
             </div>
         </div>
     </div>
-
+    <div class="ribbon-container">
+        <img src="./images/DitaMoser_Calendar_1911.png" alt="Ribbon" class="ribbon">
+    </div>
     <!-- Section 1 -->
-    <section id="section-1" class="container section">
-        <div class="row">
-            <div class="col">
-                <h2>Background</h2>
-                <p>This is the content of section 1.</p>
-            </div>
-        </div>
+    <section id="section-1" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-up">
+                    <h2>MoMA - The Quest for Diversity</h2>
+                    <h4>A study on a museums acquisition policy.</h4 <p>In 2019 MoMA closed its doors for four
+                    months to
+                    address its lack of
+                    diversity and representation of artists of different races, genders, and nationalities
+                    within their works on view. <br>
+                    Jason Farago (2019) described in the New York Times how putting Picasso and Monet next to more
+                    recent, diverse artists
+                    changed the MoMA experience.</p>
+
+                </div>
+                <div class="col-md-6" data-aos="fade-up">
+
+                    <div class="image-container">
+                        <img src="./images/Collection1880s_1940s.png" class="img-fluid"
+                            alt="Two images from the MoMA collection">
+                        <div class="info-glyph" onclick="togglePopup()">i</div>
+                        <div class="popup">
+                            <p><strong>Images: </strong>(left) Henri Matisse, 1909, Dance (I), MoMA,
+                                https://www.moma.org/calendar/galleries/5137; (right) Liubov Popova, 1917, Painterly
+                                Architectonic, MoMA, https://www.moma.org/calendar/galleries/5527</p>
+                            <!-- Add more metadata as needed -->
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <h2>But did the acquisition practice change as well?</h2>
+                    <p>This study wants to determine whether the acquisition policy of the MoMA changed
+                        during its existence and especially during the last five years.
+                        <br>
+                        <br>
+                        For this purpose diversity
+                        measures - as widely used in ecology - are transferred to the cultural domain; - to gain new
+                        insights, to explore their applicability and usability, and to enjoy the pleasures,
+                        uncertainties, and surprises of inter- and transdisciplinary endevors.
+                    </p>
+                </div>
     </section>
+
+    <div class="parallax"></div>
 
     <!-- Section 2 -->
     <section id="section-2" class="container section">
@@ -67,8 +107,12 @@
                 <p>This is the content of section 4.</p>
             </div>
         </div>
-
+        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         <script src="script.js"></script>
+
 </body>
 
 </html>
