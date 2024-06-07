@@ -291,9 +291,8 @@ section {
     /* Full opacity on hover */
 }
 
-
 .collapsible {
-    background-color: #bcbaba;
+    background-color: #777;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -302,6 +301,21 @@ section {
     text-align: left;
     outline: none;
     font-size: 15px;
+    position: relative;
+}
+
+.collapsible:after {
+    content: '\002B';
+    /* Unicode character for + sign */
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+    /* Unicode character for - sign */
 }
 
 .active,
