@@ -134,11 +134,16 @@ html {
 
 }
 
+.show-back {
+    transform: rotateY(180deg);
+    /* Initially show back side */
+}
+
 .flip-card {
     width: 250px;
     height: 350px;
     perspective: 1000px;
-    margin: 5px;
+    margin: 10px;
     border: 1px solid lightgrey;
 }
 
@@ -146,12 +151,19 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
+    transition: transform 0.9s;
     transform-style: preserve-3d;
 }
 
+/* Regular hover effect */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+}
+
+/* Adjusted hover effect for cards initially showing back */
+.flip-card:hover .flip-card-inner.show-back {
+    transform: rotateY(360deg);
+    /* Flips to show the front */
 }
 
 .flip-card-front,
@@ -164,11 +176,9 @@ html {
 
 .flip-card-front {
     color: black;
-    text-align: left;
-    background-color: #f8f9fa;
+    background-color: #eee8e4;
     display: flex;
     flex-direction: column;
-    /* align-items: center;*/
     align-items: left;
     justify-content: center;
     padding: 10px;
@@ -181,14 +191,14 @@ html {
     margin-bottom: 5px;
 }
 
-.flip-card-front h4,
-.flip-card-front h5 {
+.flip-card-front h3,
+.flip-card-front h4 {
     text-align: center;
-    width: 100%;
     margin: 5px 0;
 }
 
 .flip-card-front p {
+    text-align: left;
     margin: 2px 0;
     /* Reduced margin for a tight list appearance */
     line-height: 1.2;
@@ -196,8 +206,8 @@ html {
 }
 
 .flip-card-back {
-    background-color: #2980b9;
-    color: white;
+    background-color: #afc4d2;
+    color: rgb(252, 239, 239);
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
@@ -216,8 +226,25 @@ html {
     max-width: 100%;
 }
 
+@media (max-width: 768px) {
+    .flip-card {
+        width: 100%;
+        /* Full width on smaller screens */
+        margin: 10px auto;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .container {
+        padding: 0;
+    }
+}
+
+
 .parallax {
-    background-image: url('parallax-bg.jpg');
+    background-image: url('./images/MoMA_Hanging_2024.png');
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -335,7 +362,7 @@ section {
 }
 
 .collapsible {
-    background-color: #777;
+    background-color: #a5a2a2;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -376,4 +403,32 @@ section {
 
 .center-text {
     text-align: center;
+}
+
+.background-container {
+    width: 100vw;
+    /* Ensures the container uses the full viewport width */
+    max-width: 100%;
+    /* Prevents the container from extending beyond the viewport */
+    margin-left: calc(-50vw + 50%);
+    /* Centers the container */
+    margin-right: calc(-50vw + 50%);
+    /* Helps in maintaining the full viewport width */
+    overflow: hidden;
+    /* Prevents any horizontal scroll caused by full viewport width */
+    background-image: url('./images/MoMA_Hanging_2024.png');
+    /* Sets the background image */
+    background-size: cover;
+    /* Ensures the background covers the entire area */
+    background-position: center center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Prevents the background image from repeating */
+    overflow-x: hidden;
+    /* Prevents horizontal scroll */
+}
+
+
+.row {
+    margin-bottom: 20px;
 }
