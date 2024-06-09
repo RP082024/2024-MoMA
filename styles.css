@@ -135,12 +135,11 @@ html {
 }
 
 .flip-card {
-    width: 300px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     perspective: 1000px;
-    margin: 10px;
+    margin: 5px;
     border: 1px solid lightgrey;
-    /* Light grey border */
 }
 
 .flip-card-inner {
@@ -165,23 +164,35 @@ html {
 
 .flip-card-front {
     color: black;
+    text-align: left;
     background-color: #f8f9fa;
-    /* Off-white background */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* Centering content vertically */
+    /* align-items: center;*/
+    align-items: left;
     justify-content: center;
     padding: 10px;
-    /* Padding to ensure content is not too close to edges */
     text-align: left;
 }
 
-.flip-card-front h3 {
+.flip-card-front img {
+    height: 65%;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.flip-card-front h4,
+.flip-card-front h5 {
     text-align: center;
-    /* Centering titles */
     width: 100%;
-    /* Ensures the title can center-align correctly */
+    margin: 5px 0;
+}
+
+.flip-card-front p {
+    margin: 2px 0;
+    /* Reduced margin for a tight list appearance */
+    line-height: 1.2;
+    /* Tighter line spacing */
 }
 
 .flip-card-back {
@@ -197,11 +208,11 @@ html {
 
 .flip-card-back h1 {
     text-align: center;
+    font-size: 4em;
     margin-bottom: 0.5em;
 }
 
 .img-fluid {
-    max-height: 100%;
     max-width: 100%;
 }
 
