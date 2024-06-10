@@ -226,21 +226,6 @@ html {
     max-width: 100%;
 }
 
-@media (max-width: 768px) {
-    .flip-card {
-        width: 100%;
-        /* Full width on smaller screens */
-        margin: 10px auto;
-    }
-
-    .row {
-        justify-content: center;
-    }
-
-    .container {
-        padding: 0;
-    }
-}
 
 
 .parallax {
