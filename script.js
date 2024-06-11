@@ -43,3 +43,29 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("widgetCarousel");
+
+    carousel.addEventListener("touchstart", function (event) {
+        const xClick = event.touches[0].pageX;
+
+        const handleTouchMove = function (event) {
+            const xMove = event.touches[0].pageX;
+            if (Math.floor(xClick - xMove) > 5) {
+                $('#widgetCarousel').carousel('next');
+            } else if (Math.floor(xClick - xMove) < -5) {
+                $('#widgetCarousel').carousel('prev');
+            }
+            carousel.removeEventListener('touchmove', handleTouchMove);
+        };
+
+        carousel.addEventListener("touchmove", handleTouchMove);
+
+        carousel.addEventListener("touchend", function () {
+            carousel.removeEventListener("touchmove", handleTouchMove);
+        });
+    });
+});
+
+
+
