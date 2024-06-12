@@ -487,7 +487,7 @@ section {
 
 .img-comp-container {
     position: relative;
-    height: 600px;
+    height: 360px;
     /*should be the same height as the images*/
 }
 
@@ -500,7 +500,6 @@ section {
 
 .img-comp-img img {
     display: block;
-    vertical-align: middle;
 }
 
 .img-comp-slider {
