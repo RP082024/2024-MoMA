@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
 function initComparisons() {
     var x, i;
     /* Find all elements with an "overlay" class: */
@@ -144,5 +143,3 @@ function initComparisons() {
         }
     }
 }
-
-
