@@ -96,7 +96,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('./images/MoMA_KI_bigger.png') no-repeat center center fixed;
+    background: url('./images/New_MoMA_KI.png') no-repeat center center fixed;
     background-size: cover;
     height: 50vh;
     /* Set initial height to 50% of viewport height */
