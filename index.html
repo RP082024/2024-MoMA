@@ -9,6 +9,32 @@
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Scoped Styles -->
+    <style>
+        #myCarousel {
+            position: relative;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+
+            width: 30px;
+            height: 30px;
+        }
+
+        .widget-container {
+            text-align: center;
+        }
+
+        .widget-container h3 {
+            font-size: 1.5em;
+        }
+
+        .carousel-inner iframe {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,10 +42,10 @@
     <div class="hamburger-menu">
         <div class="hamburger-icon"></div>
         <ul class="menu-items">
-            <li><a href="#section-1" style="text-decoration: none; color:darkgrey">Background</a></li>
-            <li><a href="#section-2" style="text-decoration: none; color:darkgrey">Results</a></li>
-            <li><a href="#section-3" style="text-decoration: none; color:darkgrey">Methodology</a></li>
-            <li><a href="#section-4" style="text-decoration: none; color:darkgrey">Reflection</a></li>
+            <li><a href="#section-1" style="text-decoration: none; color:rgb(43, 41, 41)">Background</a></li>
+            <li><a href="#section-2" style="text-decoration: none; color:rgb(43, 41, 41)">Results</a></li>
+            <li><a href="#section-3" style="text-decoration: none; color:rgb(43, 41, 41)">Methodology</a></li>
+            <li><a href="#section-4" style="text-decoration: none; color:rgb(43, 41, 41)">Reflection</a></li>
         </ul>
     </div>
     <!-- Bold Intro Image Section -->
@@ -129,6 +155,7 @@
                                         <p>Barr proposed selling works more than fifty years old to other museums as
                                             MoMA’s collection aged, while
                                             continuing to purchase work by living artists.<br>
+                                            <br>
                                             <br>
                                             This radical approach was never implemented and is softened by the
                                             declaration, that modernity is still an ongoing process.<br>
@@ -280,7 +307,7 @@
                                 <button type="button" class="collapsible">The Complete Collection</button>
                                 <div class="content">
                                     <div class="row" data-aos="fade-up">
-                                        <div class="col-md-6">
+                                        <div class="col-md-12">
                                             <br>
                                             <p>The <b>collection at the MoMA</b> is as varied and plentiful as expected,
                                                 similar to how a zoo
@@ -416,12 +443,11 @@
                     <h2>What is achieved? <br>
                         What shall be achieved?</h2>
                     <br>
-                    <ul>
-                        <p><b>In any case, MoMA's pursuit of
-                                diversity has broadened its appreciation for artworks outside its traditional scope,
-                                benefiting
-                                the museum, artists, researchers, and the public.</b> <br>
-                    </ul>
+                    <b>In any case, MoMA's pursuit of
+                        diversity has broadened its appreciation for artworks outside its traditional scope,
+                        benefiting
+                        the museum, artists, researchers, and the public.</b> <br>
+                    </b>
                     <br>
                     Let us confidently assume (and monitor!) that they will
                     steadfastly continue on this path.
@@ -510,57 +536,79 @@
                 </div>
             </div>
             <br>
-            <h3>Curious for more?</h3>
+            <h2>Curious for more?</h2>
             <h5>Explore the MoMA paintings via interactive flowcharts</h5>
             <br>
-
             <!-- Carousel: try to restart with tutorial https://www.w3schools.com/bootstrap/bootstrap_carousel.asp -->
-            <div class="container">
-                <!-- Carousel with id="widgetCarousel" -->
-                <div id="widgetCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <!-- data-target="#widgetCarousel" links the indicator to the carousel id -->
-                        <li data-target="#widgetCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#widgetCarousel" data-slide-to="1"></li>
+            <div id="myCarousel" class="carousel slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                    <li data-target="#myCarousel" data-slide-to="5"></li>
+                </ol>
 
-                        <li data-target="#widgetCarousel" data-slide-to="2"></li>
-                    </ol>
-
-                    <div class="carousel-inner">
-                        <!-- Each carousel-item corresponds to the data-slide-to index -->
-                        <div class="carousel-item active">
-                            <div class="widget-container">
-                                <h3>Acquisitions by Gender Through Time</h3>
-                                <iframe src="./images/Sankey_Acqu25xGender.html"></iframe>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="widget-container">
-                                <h3>Paintings by Year Created On View</h3>
-                                <iframe src="./images/Sankey_CreatedAtYearxVisible.html"></iframe>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="widget-container">
-                                <h3>Acquisitions by Cultural Regions Through Time</h3>
-                                <iframe src="./images/Sankey_Acqu25xCultRegion.html"></iframe>
-                            </div>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="widget-container">
+                            <h3>Year the paintings were created by acquisition periods</h3>
+                            <iframe src="./images/Sankey_CreatedAtYearxAcquired25.html"></iframe>
                         </div>
                     </div>
 
-                    <!-- Controls -->
-                    <a class="carousel-control-prev" href="#widgetCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#widgetCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class="carousel-item">
+                        <div class="widget-container">
+                            <h3>Acquisition period and cultural regions from where paintings were bought</h3>
+                            <iframe src="./images/Sankey_Acqu25xCultRegion.html"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="widget-container">
+                            <h3>Acquisition period and gender of artist from whom paintings were bought</h3>
+                            <iframe src="./images/Sankey_Acqu25xGender.html"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="widget-container">
+                            <h3>Year the paintings were created by gender of artist</h3>
+                            <iframe src="./images/Sankey_CreatedAtYearxCultRegion.html"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="widget-container">
+                            <h3>Year the paintings were created by cultural regions</h3>
+                            <iframe src="./images/Sankey_CreatedAtYearxCultRegion.html"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="widget-container">
+                            <h3>Year the paintings were created by archived/on view</h3>
+                            <iframe src="./images/Sankey_CreatedAtYearxVisible.html"></iframe>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
-        </div>
+
+
+
     </section>
     <div class="parallax>
             <div class=" ribbon-container">
@@ -634,6 +682,8 @@
                                 <br>
                                 <p>This overview is adapted from Zach Bobbitt (2024) <a
                                         href="https://www.statology.org/shannon-diversity-index/">Website Statology</a>
+                                    <br>
+                                    === WORK IN PROGRESS ===
                                 </p>
                                 <br>
                                 <br>
@@ -690,21 +740,25 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <div class="container">
-                <div class="row"></div>
-                <div class="col-md-6" data-aos="fade-up">
-                    <h2>Section 3</h2>
-                    <p>This is the content of section 3.</p>
+        </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row"></div>
+            <div class="col-md-6" data-aos="fade-up">
+                <h2>Section 3</h2>
+                <p>This is the content of section 3.</p>
 
 
-                </div>
             </div>
         </div>
-        </div>
-    </section>
 
+    </section>
+    <div class="parallax>
+                <div class=" ribbon-container">
+        <img src="./images/DitaMoser_Calendar_1911.png" alt="Ribbon" class="ribbon">
+    </div>
     <!-- Section 4 -->
     <section id="section-4" class="py-5">
         <div class="container">
@@ -717,49 +771,55 @@
                     </p>
                     <br>
                     <br>
+
+                    <div class="container">
+                        <button type="button" class="collapsible">References</button>
+                        <div class="content">
+                            <div class="row" data-aos="fade-up">
+                                <div class="col-md-6">
+
+                                    <br>
+                                    <ul>Bishara, Hakim (2019). Artists in 18 Major US Museums Are 85% White and 87%
+                                        Male, Study
+                                        Says.
+                                        In:
+                                        Hypoallergic (BLOG),
+                                        https://hyperallergic.com/501999/artists-in-18-major-us-museums-are-85-white-and-87-male-study-says/
+                                        (retrieved 2024-06-13)</ul>
+                                    <ul>Bobbitt, Zach (2024). Website "Statology".
+                                        https://www.statology.org/shannon-diversity-index/
+                                        (retrieved 2024-06-14)</ul>
+                                    <ul>Chat-GPT 4.0 (2024). Substantial Parts of the Code (html, css, js) and minor
+                                        parts of
+                                        the
+                                        content are created with the assistence of Chat-GPT 4.0</ul>
+                                    <ul>Krebs, Charles J. (1999). Ecological Methodology (2nd Ed.). Addison Wesley
+                                        Longman Inc.
+                                    </ul>
+                                    <ul>Magurran, Anne. E. (1988). Ecological Diversity and its Measurement. Princeton
+                                        University
+                                        Press, Princeton, NJ.</ul>
+                                    <ul>R Core Team (2024). _R: A Language and Environment for Statistical Computing_. R
+                                        Foundation for
+                                        Statistical Computing,
+                                        Vienna, Austria. https://www.R-project.org/</ul>
+                                    <ul>RStudio Team (2020). Posit/RStudio: Integrated Development for R. RStudio, PBC,
+                                        Boston,
+                                        MA URL http://www.rstudio.com/.</ul>
+                                    <ul>Shannon, Claude E. (1948). The mathematical Theory of Communication.
+                                        https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf
+                                    </ul>
+                                    <ul>Topaz, Chad et al. (2019). Diversity of artists in major U.S. museums. </ul>
+                                    <ul>Wikipedia (2024). Diversity Index. https://en.wikipedia.org/wiki/Diversity_index
+                                        (retrieved:
+                                        2024-06-13)</ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6" data-aos="fade-up">
-                    <h2>References</h2>
-                    <ul>Bishara, Hakim (2019). Artists in 18 Major US Museums Are 85% White and 87% Male, Study Says.
-                        In:
-                        Hypoallergic (BLOG),
-                        https://hyperallergic.com/501999/artists-in-18-major-us-museums-are-85-white-and-87-male-study-says/
-                        (retrieved 2024-06-13)</ul>
-                    <ul>Bobbitt, Zach (2024). Website "Statology". https://www.statology.org/shannon-diversity-index/
-                        (retrieved 2024-06-14)</ul>
-                    <ul>Chat-GPT 4.0 (2024). Substantial Parts of the Code (html, css, js) and minor parts of the
-                        content are created with the assistence of Chat-GPT 4.0</ul>
-                    <ul>Krebs, Charles J. (1999). Ecological Methodology (2nd Ed.). Addison Wesley Longman Inc.</ul>
-                    <ul>Magurran, Anne. E. (1988). Ecological Diversity and its Measurement. Princeton University
-                        Press, Princeton, NJ.</ul>
-                    <ul>R Core Team (2024). _R: A Language and Environment for Statistical Computing_. R Foundation for
-                        Statistical Computing,
-                        Vienna, Austria. https://www.R-project.org/</ul>
-                    <ul>RStudio Team (2020). Posit/RStudio: Integrated Development for R. RStudio, PBC, Boston,
-                        MA URL http://www.rstudio.com/.</ul>
-                    <ul>Shannon, Claude E. (1948). The mathematical Theory of Communication.
-                        https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf </ul>
-                    <ul>Topaz, Chad et al. (2019). Diversity of artists in major U.S. museums. </ul>
-                    <ul>Wikipedia (2024). Diversity Index. https://en.wikipedia.org/wiki/Diversity_index
-                        (retrieved:
-                        2024-06-13)</ul>
-
-
-
-
-
-
-                    <br>
-
-                    <ul>Wikipedia (2024). Diversity Index. https://en.wikipedia.org/wiki/Diversity_index</ul>
-                </div>
-            </div>
-        </div>
-        </div>
-        </div>
-        </div>
+    </section>
 
 
 
@@ -768,25 +828,36 @@
 
 
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#myCarousel').carousel({
+                interval: false
+            });
+        });
+    </script>
 
-        <!-- Include jQuery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <!-- Include Popper.js -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-        <!-- Include Bootstrap JS -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Include Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-        <!-- Link to the external JS file -->
-        <script src="script.js"></script>
-        <script>
-            initComparisons();
-        </script>
+    <!-- Link to the external JS file -->
+    <script src="script.js"></script>
+    <script>
+        initComparisons();
+    </script>
 
-        <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
