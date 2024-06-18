@@ -472,8 +472,8 @@
                                     acquisitions). <br>
                                     This strategy presupposes the
                                     availability of such
-                                    artworks at costs as were typical at the time of their creation, and it means giving
-                                    up collecting all contemporary artworks during
+                                    artworks at costs as were typical at the time of their creation, and it means to
+                                    stop collecting all contemporary artworks during
                                     this
                                     period. <br>
                                     <br>
@@ -682,7 +682,110 @@
                                 <p>This overview is adapted from Zach Bobbitt (2024) <a
                                         href="https://www.statology.org/shannon-diversity-index/">Website Statology</a>
                                     <br>
-                                    === WORK IN PROGRESS ===
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h4>Step 1: Collect the Data</h4>
+                                        <p>Suppose an art historian wants to determine the diversity of paintings at a
+                                            museum. <br>She creates 'cultural species' and counts the paintings, that
+                                            fall
+                                            into each category.<br><br>
+                                            <img src="./images/Step1.png"
+                                                alt="Step1: Collecting Data (Species and their Frequencies)"
+                                                class="img-fluid">
+                                            <br><i>She has collected 105 paintings belonging to 5 'cultural
+                                                species'</i><br>
+                                            <br>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <h4>Step 2: Calculate the Proportions</h4>
+
+                                        <p>The data set holds 105 paintings. 40 belong to 'cultural species' A. The art
+                                            historian calculates 40/105 to get the proportion. 0.38 (or 38%) of the
+                                            whole collection belong to 'cultural species' A.<br><br>
+                                            <img src="./images/Step2.png"
+                                                alt="Step2: Calculating Proportions for each species (the share)"
+                                                class="img-fluid">
+                                            <br><i>105 paintings belonging to 5 'cultural species'
+                                                with shares between 8
+                                                and
+                                                38%.</i><br>
+                                            <br>
+                                        </p>
+
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h4>Step 3: Calculate the Natural Log of the Proportions</h4>
+                                        <p>Now she can calculate the natural log of the proportions. This helps to
+                                            diminish the effect of extremly common or extremly rare 'cultural
+                                            species'.<br><br>
+                                            <img src="./images/Step3.png"
+                                                alt="Step3: Calculating the Natural Log of the Proportions"
+                                                class="img-fluid">
+                                            <br>
+                                            <i>This step produces negative values, that's why the formula includes a
+                                                minus sign at the beginning.</i><br>
+                                        </p>
+                                    </div>
+
+
+
+                                    <div class="col-md-4">
+                                        <h4>Step 4: Multiply the Proportions by the Natural Log of the Proportions</h4>
+                                        <p>A simple multiplication of column 3 and 4.<br><br><br>
+                                            <img src="./images/Step4.png"
+                                                alt="Step4: Multiplication of Proportion by ln(Proportion)"
+                                                class="img-fluid">
+                                            <br>
+                                            <i>Our hypothetical art historian is almost done with the
+                                                calculations.</i><br>
+                                            <br>
+                                        </p>
+                                    </div>
+
+
+                                    <div class="col-md-4">
+                                        <h4>Step 5: Calculate the Shannon Diversity Index</h4>
+                                        <p>Now she takes the sum of the last column and multiplies it by negative
+                                            one.<br><br>
+                                            <img src="./images/Step5.png"
+                                                alt="Step5: Summation of last columns & Multiplication by negative one"
+                                                class="img-fluid">
+                                            <br>
+                                            <i>The Shannon Diversity Index (H) was calculated to be 1.49.</i><br>
+                                            <br>
+                                        </p>
+
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h4>Step 6: Standardization for Comparability across Collections </h4>
+                                        <p>By calculating the Shannon Equitability Index (H/ln('cultural species')), aka
+                                            dividing the Shannon Index by the maximum possible value, given the number
+                                            of
+                                            'cultural species' present, the index gets comparible across different
+                                            collections.
+                                            <br>
+                                            <img src="./images/ShannonEquitabilityIndex.png"
+                                                alt="Step6: Summation of last columns & Multiplication by negative one"
+                                                class="img-fluid">
+
+                                            <i>The standardized Shannon Diversity Index (H), aka Shannon Equitability
+                                                Index was calculated to be 92% (E<sub>H</sub> = 1.49 / ln(5) =
+                                                0.92).</i><br>
+                                            <br>
+                                        </p>
+                                    </div>
+                                </div>
+                                There are a lot of diversity measures and standardization methods out there. This is
+                                just one example, that is not even best suited for the purpose of comparing collections'
+                                diversity (brillouin index might be better suited to that task), but was chosen as an
+                                easy way to showcase the approach. <br> To learn about diversity see the references at
+                                the
+                                end of the website.
                                 </p>
                                 <br>
                                 <br>
@@ -753,6 +856,7 @@
 
             </div>
         </div>
+        </div>
 
     </section>
     <div class="parallax>
@@ -784,7 +888,10 @@
                         <p>The MoMA data set from May 5th 2024 with all paintings from the department of "Paintings &
                             Sculptures" selected and cleaned (to a high degree this was done manually by two art
                             historians as domain
-                            experts).</p>
+                            experts). <br>This data is based on the data set provided by MoMA (see References), but was
+                            modified in
+                            relevant
+                            parts. </p>
                         <div class="img">
                             <img src="./images/QR_MoMA_data.png" width="300" height="300"
                                 alt="QR code to MoMA Paintings Data">
@@ -823,6 +930,10 @@
                                         Wesley
                                         Longman Inc.
                                     </ul>
+                                    <ul>MoMA (2024). The Museum of Modern Art (MoMA) Collection. Data on artworks and
+                                        artists. CC0 License. Available at
+                                        <a>https://github.com/MuseumofModernArt/collection (retrieved 2024, May 5th)</a>
+                                    </ul>
                                     <ul>Magurran, Anne. E. (1988). Ecological Diversity and its Measurement.
                                         Princeton
                                         University
@@ -832,6 +943,8 @@
                                         Foundation for
                                         Statistical Computing,
                                         Vienna, Austria. https://www.R-project.org/</ul>
+                                    <ul>Robot, O. D. (2024). MoMA Collection - Automatic Update [Data set]. Zenodo.
+                                        https://doi.org/10.5281/zenodo.11562525</ul>
                                     <ul>RStudio Team (2020). Posit/RStudio: Integrated Development for R.
                                         RStudio, PBC,
                                         Boston,
