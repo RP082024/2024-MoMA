@@ -5,6 +5,27 @@ html {
     padding: 0;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1.2em;
+    /* Adjust the size as needed */
+}
+
+.enlarge-text {
+    font-size: 1.4em;
+    /* Adjust the size as needed */
+}
+
+.smaller-text {
+    font-size: 1.0em;
+    /* Adjust the size as needed */
+}
+
 /* Hamburger Menu styles */
 .hamburger-menu {
     position: fixed;
@@ -89,6 +110,8 @@ html {
     color: #000;
 
 }
+
+
 
 
 /* Bold Intro Image Section styles */
